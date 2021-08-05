@@ -1,0 +1,94 @@
+.content {
+    max-width: 1120px;
+    margin: 0 auto;
+    
+    margin-top: 4rem;
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 1rem;
+        
+        .noSearch {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 1.5rem;
+            
+            width: 300px;
+            height: 300px;
+            border-radius: .5rem;
+            
+            color: var(--white);
+            text-align: center;
+
+            background: var(--green-gradient-linear);
+        }
+    }
+
+    table {
+        width: 100%; // padrão da table não ocupa todo o espaço
+        border-spacing: 0 0.5rem;
+        margin-top: 2rem;
+
+        th {
+            color: var(--orange-500);
+            font-weight: 500;
+            padding: 1rem 2rem;
+            text-align: left;
+            line-height: 1.5rem; // mais espaçamento - distância entre linhas
+        }
+
+        td {
+            max-width: 250px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+
+            padding: 1rem 2rem;
+            border: 0;
+            background: var(--gray-300);
+            color: var(--green-900);
+            border-radius: 0.25rem;
+            font-weight: 500;
+            
+            text-transform: capitalize;
+
+            > div {
+                display: flex;
+                align-items: center;
+                
+                gap: .3rem;
+                
+                .button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: inherit;
+
+                    padding: .5rem;
+
+                    border: 0;
+
+                    svg path {
+                        transition: 0.2s;
+                        stroke: var(--orange-300);
+                        fill: var(--orange-300);
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+
+                        svg path {
+                            stroke: var(--red);
+                            fill: var(--red);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

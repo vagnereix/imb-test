@@ -1,0 +1,112 @@
+:root {
+    --white: #F7F7F7;
+
+    --gray-300: #F3F3F3;
+    --gray-500: #9D9D9D;
+    --gray-900: #707070;
+
+    --black: #1D1D1D;
+
+    --green-500: #47C63E;
+    --green-900: #0D8F04;
+
+    --yellow: #FAE900;
+
+    --orange-300: #FAA103;
+    --orange-500: #FA7F03;
+    --orange-900: #DB3F0E;
+
+    --red: #DB0E22;
+
+    --orange-gradient: linear-gradient(var(--orange-500), var(--orange-900));
+    --orange-gradient-radial: linear-gradient(var(--orange-500), var(--orange-900));
+
+    --green-gradient-linear: linear-gradient(var(--green-900), var(--green-500));
+    --green-gradient-radial: radial-gradient(var(--green-900), var(--green-500));
+}
+
+@import url("react-toastify/dist/ReactToastify.css");
+
+.Toastify__toast--warning {
+  background: #FAA103;
+  font-weight: bold;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(#47C63E, #0D8F04);
+  font-weight: bold;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(#DB3F0E, #DB0E22);
+  font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font: 400 1rem "Poppins", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.react-modal-overlay {
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.react-modal-content {
+  width: 100%;
+  max-width: 576px;
+  background: var(--orange-500);
+  padding: 3rem;
+  position: relative;
+  border-radius: 0.25rem;
+}
+.react-modal-close {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  border: 0;
+  background: transparent;
+  transition: filter 0.2s;
+
+  svg path {
+    stroke: var(--black);
+    fill: var(--black);
+  }
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(0.82);
+  }
+}

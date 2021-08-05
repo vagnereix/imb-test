@@ -1,0 +1,129 @@
+.headerContainer {
+  height: 5rem;
+  box-shadow: 0px 1px 3px var(--gray-500);
+  background: var(--orange-gradient);
+}
+
+.headerContent {
+  max-width: 1120px;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  form {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    input {
+      height: 50px;
+      border-radius: .5rem;
+      padding: 0 1rem;
+      background: #fff;
+
+      border: 2px solid var(--green-500);
+
+      & + input {
+          margin-top: .5rem;
+      }
+
+      &:focus {
+          outline: none;
+          border: 2px solid var(--black);
+      }
+    }
+    
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      box-shadow: 0px 1px 3px var(--green-900);
+
+      width: 100%;
+      margin: 0 auto;
+
+      font-weight: 500;
+      border: 0;
+      padding: 0.75rem 1.5rem;
+      border-radius: .5rem;
+      color: #FFF;
+      background: radial-gradient(var(--green-900), var(--green-500));
+
+      transition: filter 0.2s;
+
+      &:hover {
+        cursor: pointer;
+        filter: brightness(0.9);
+      }
+
+      svg path {
+        fill: var(--white);
+        stroke: var(--white);
+      }
+    }
+  }
+
+  nav {
+    margin-left: 5rem;
+    height: 5rem;
+
+    display: flex;
+    gap: 2rem;
+
+    a {
+      display: inline-block;
+      position: relative;
+      padding: 0 0.5rem;
+      height: 5rem;
+      line-height: 5rem;
+      font-weight: 500;
+
+      color: var(--gray-300);
+      transition: all 0.2s;
+
+      &::after {
+        content: "";
+        height: 5px;
+        border-radius: 3px 3px 0 0;
+        width: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: var(--orange-300);
+
+        transition: width 0.2s;
+      }   
+
+      &:hover {
+        cursor: pointer;
+
+        &::after {
+            width: 100%;
+        }
+      }
+
+      &.active {
+        color: var(--white);
+        font-weight: 600;
+
+        transition: all 0.3s;
+      }
+
+      &.active::after {
+        content: "";
+        height: 5px;
+        border-radius: 3px 3px 0 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: var(--orange-300);
+      }
+    }
+  }
+}
